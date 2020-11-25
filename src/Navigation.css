@@ -1,0 +1,15 @@
+.nav {
+    list-style-type: none;
+    display: flex;
+    margin: 30px;
+    align-self: flex-end;
+    color: #D80000;
+    font-family: "Nerko One";
+    font-size: 30px;
+    
+    
+}
+
+.nav li {
+    margin: 0 10px;
+}

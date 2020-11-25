@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navigation from "./Navigation";
+import Heading from "./Heading";
+import Search from "./Search";
+import mandarin from './mandarin.svg';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="app">
+            <Navigation />
+            <Heading />
+            <Search />
+            <img id="mandarin-image" src={mandarin} alt="mandarin" />
+        </div>
+    );
 }
 
 export default App;
