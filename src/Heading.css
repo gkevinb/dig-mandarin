@@ -4,13 +4,14 @@
 }
 
 .heading h1 {
-    font-size: 110px;
-    font-family: "Nerko One";
-    color:#D80000;
+    font-size: 130px;
+    font-family: 'Dancing Script', cursive;
+    color: #D80000;
 }
 
 .heading p {
     margin-top: -30px;
     text-align: right;
-    color:#EE1C1C;
+    color: #EE1C1C;
 }
+

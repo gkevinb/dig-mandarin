@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap');
 
 
 * {
@@ -11,6 +12,22 @@
     margin: auto;
     max-width: 1400px;
 }
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__text {
+    margin: 100px;
+    color: red;
+    width: 300px;
+}
+
+.content__text p {
+    margin-bottom: 10px;
+}
+
 
 #mandarin-image {
     width: 800px;

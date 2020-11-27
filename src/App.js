@@ -10,7 +10,14 @@ function App() {
             <Navigation />
             <Heading />
             <Search />
-            <img id="mandarin-image" src={mandarin} alt="mandarin" />
+            <div className="content">
+                <div className="content__text">
+                    <p>- Intellectual Chinese - English Dictionary</p>
+                    <p>- Stroke order, character decomposition, radical explanation and much more!</p>
+                </div>
+                <img id="mandarin-image" src={mandarin} alt="mandarin" />
+            </div>
+            
         </div>
     );
 }

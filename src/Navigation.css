@@ -12,4 +12,23 @@
 
 .nav li {
     margin: 0 10px;
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 800;
+    color: #e96f6f;
+    overflow: hidden;
+    background: linear-gradient(to right, #D80000,#D80000 50%, #e96f6f 50%);
+    background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+ 
+}
+
+.nav li:hover {
+    background-position: 0 100%;
+    
 }
