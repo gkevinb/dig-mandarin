@@ -1,17 +1,16 @@
 .heading {
-    align-self: center;
-    margin: 60px;
+  align-self: center;
+  margin: 60px;
 }
 
 .heading h1 {
-    font-size: 130px;
-    font-family: 'Dancing Script', cursive;
-    color: #D80000;
+  font-size: 130px;
+  font-family: "Dancing Script", cursive;
+  color: #d80000;
 }
 
 .heading p {
-    margin-top: -30px;
-    text-align: right;
-    color: #EE1C1C;
+  margin-top: -20px;
+  text-align: right;
+  color: #ee1c1c;
 }
-

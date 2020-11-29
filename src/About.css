@@ -1,0 +1,33 @@
+.about {
+  /* margin: 60px; */
+}
+
+.icons {
+  width: 200px;
+  object-fit: contain;
+}
+
+.first-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 60px;
+}
+
+.second-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 60px;
+}
+
+.third-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 60px;
+}
+
+.text-container {
+  width: 700px;
+}
