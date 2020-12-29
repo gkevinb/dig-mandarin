@@ -26,7 +26,7 @@ function Search() {
                     type="text"
                     id="search"
                     name="search"
-                    placeholder="Enter ，文字 Pinyin or English"
+                    placeholder="Enter 文字 Pinyin or English"
                 />
                 <IconButton disableRipple className={classes.search}>
                     <SearchIcon fontSize="large" />

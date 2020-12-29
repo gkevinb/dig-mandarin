@@ -31,3 +31,12 @@
 .text-container {
   width: 700px;
 }
+
+.text-container p {
+  line-height: 24px;
+}
+
+.text-container h2 {
+  color: red;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}

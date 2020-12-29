@@ -4,6 +4,7 @@ import Navigation from "./Navigation";
 import Heading from "./Heading";
 import Search from "./Search";
 import About from "./About";
+import CharacterPage from "./CharacterPage";
 import mandarin from "./mandarin.svg";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <img id="mandarin-image" src={mandarin} alt="mandarin" />
       </div>
       <About />
+      <CharacterPage />
     </div>
   );
 }
