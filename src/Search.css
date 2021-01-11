@@ -25,3 +25,7 @@ input:focus,
 select:focus {
   outline: none;
 }
+
+#tangerine-icon {
+  width: 60px;
+}

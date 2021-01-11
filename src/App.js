@@ -12,7 +12,7 @@ function App() {
     <div className="app">
       <Navigation />
       <Heading />
-      <Search />
+      <Search main={true} />
       <div className="content">
         <div className="content__text">
           <p>- Intellectual Chinese - English Dictionary</p>
