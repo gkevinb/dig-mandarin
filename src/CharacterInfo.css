@@ -1,28 +1,28 @@
 .characterInfo {
-  width: 300px;
-  height: 400px;
-  background-color: #f6ede9;
-  border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    background-color: #f6ede9;
+    border-radius: 10px;
 }
 
 .characterInfo__top {
-  height: 60px;
-  border-radius: 10px;
-  background-color: #f3614b;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #f3614b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .characterInfo__top > h4 {
 }
 
 .characterInfo__row {
-  background-color: #white;
-  height: 60px;
+    background-color: #white;
+    height: 60px;
 }
 
 .characterInfo__row--dark {
-  background-color: #ffe2c2;
+    background-color: #ffe2c2;
 }
