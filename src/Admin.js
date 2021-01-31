@@ -4,6 +4,7 @@ import firebase from "firebase";
 import Login from "./Login";
 import { userState } from "./atoms/userState";
 import { useRecoilState } from "recoil";
+import Row from "./Row";
 
 function Admin() {
     const [user, setUser] = useRecoilState(userState);
@@ -14,6 +15,8 @@ function Admin() {
     const [partOfSpeech, setpartOfSpeech] = useState("");
     const [matchingResult, setMatchingResult] = useState("");
 
+    const [rows, setRows] = useState([]);
+
     useEffect(() => {
         auth.onAuthStateChanged((userAuth) => {
             if (userAuth) {
@@ -23,15 +26,26 @@ function Admin() {
                 });
             }
         });
+
+        db.collection("characters")
+            .orderBy("timestamp")
+            .onSnapshot((snapshot) => {
+                setRows(
+                    snapshot.docs.map((doc) => ({
+                        id: doc.id,
+                        data: doc.data(),
+                    }))
+                );
+            });
     }, []);
 
     const logout = (e) => {
         setUser({
             email: "",
-            uid: ""
-        })
+            uid: "",
+        });
         auth.signOut();
-    }
+    };
 
     const addToDb = (e) => {
         e.preventDefault();
@@ -42,6 +56,7 @@ function Admin() {
             pinyin: pinyin,
             hskLevel: hskLevel,
             partOfSpeech: partOfSpeech,
+            matchingResult: matchingResult,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         });
 
@@ -59,9 +74,6 @@ function Admin() {
                 <Login />
             ) : (
                 <div className="admin__panel">
-
-                    
-
                     <form>
                         <input
                             value={character}
@@ -105,6 +117,43 @@ function Admin() {
                         </button>
                     </form>
                     <button onClick={logout}>Logout</button>
+                    <div className="admin__table">
+                        <table>
+                            <tr>
+                                <th>Character</th>
+                                <th>English</th>
+                                <th>Pinyin</th>
+                                <th>HSK Level</th>
+                                <th>Parts of Speech</th>
+                                <th>Matching Result</th>
+                                <th>Edit</th>
+                            </tr>
+                            {rows.map(
+                                ({
+                                    id,
+                                    data: {
+                                        character,
+                                        english,
+                                        pinyin,
+                                        hskLevel,
+                                        partOfSpeech,
+                                        matchingResult,
+                                    },
+                                }) => (
+                                    <Row
+                                        key={id}
+                                        id={id}
+                                        character={character}
+                                        english={english}
+                                        pinyin={pinyin}
+                                        hskLevel={hskLevel}
+                                        partOfSpeech={partOfSpeech}
+                                        matchingResult={matchingResult}
+                                    />
+                                )
+                            )}
+                        </table>
+                    </div>
                 </div>
             )}
         </div>
